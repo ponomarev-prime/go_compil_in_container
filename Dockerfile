@@ -11,7 +11,7 @@ COPY ./src /src
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /app/go_pinger .
 
 # Создайте отдельный образ без исходного кода
-FROM scratch
+FROM scratch as baza
 
 # Скопируйте бинарный файл из предыдущего образа в текущий
 COPY --from=builder /app/go_pinger /app/
