@@ -1,0 +1,3 @@
+# Dockerfile для Go
+
+X
